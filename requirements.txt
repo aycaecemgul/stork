@@ -1,0 +1,5 @@
+waitress
+flask
+opencv-python
+mediapipe
+
