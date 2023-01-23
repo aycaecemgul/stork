@@ -30,7 +30,7 @@ def __lookalike__() -> Response:
             json_dump = json.dumps({"success": False, "status": 400})
             return Response(json_dump, status=400, mimetype='application/json')
 
-        print("Process started. Calculating the percentages...")
+        print("Analyzing the images...")
 
 
         try:

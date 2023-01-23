@@ -18,3 +18,37 @@ def get_sources(request) -> (np.ndarray, np.ndarray, np.ndarray):
     except:
         print(f"Error occurred while getting the source image. {traceback.format_exc()}")
         return None, None, None
+
+
+def detect_face(image: np.ndarray) -> bool:
+    # TODO: mediapipe. check if there is only 1 face
+    pass
+
+
+def align_face(image: np.ndarray) -> np.ndarray:
+    pass
+
+
+def preprocess(images: [np.ndarray]) -> np.ndarray:
+    # TODO: lambda func for preprocess
+
+def get_representation(image: np.ndarray):
+    global model
+    # TODO: lambda func for representation
+    pass
+
+
+def find_percentage(parent, child):
+    pass
+
+
+def analyze(mom_image, dad_image, child_image):
+
+
+    images = preprocess([mom_image, dad_image, child_image])
+    representations = get_representation(images)
+    mom_rep, dad_rep, child_rep = representations[0], representations[1], representations[2]
+    mom_percentage = find_percentage(mom_rep, child_rep)
+    dad_percentage = find_percentage(dad_rep, child_rep)
+
+    return mom_percentage, dad_percentage
